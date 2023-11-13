@@ -1,5 +1,6 @@
 const btn = document.querySelector("button");
 let num;
+let RGBColor;
 
 // Prompt user for a number and validate number
 function handleButtonClick() {
@@ -15,6 +16,14 @@ function handleButtonClick() {
   function isValidNumber(num) {
     return !isNaN(num) && num >= 2 && num <= 100;
   }
+}
+// Generate a random color for the each square
+function randomRGB() {
+  let x = Math.floor(Math.random() * 256);
+  let y = Math.floor(Math.random() * 256);
+  let z = Math.floor(Math.random() * 256);
+  RGBColor = "rgb(" + x + "," + y + "," + z + ")";
+  console.log(RGBColor);
 }
 
 btn.addEventListener("click", handleButtonClick);
@@ -37,7 +46,8 @@ function populateBoard(num) {
     gridWrapper.insertAdjacentElement("beforeend", square);
 
     square.addEventListener("mouseover", (event) => {
-      event.target.style.backgroundColor = "red";
+      event.target.style.backgroundColor = `${RGBColor}`;
+      randomRGB();
     });
     square.addEventListener("mouseout", (event) => {
       event.target.style.backgroundColor = "transparent";
