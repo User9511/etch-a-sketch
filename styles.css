@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  background-color: rgb(31, 165, 136);
+  padding: 1rem;
+  border: 0;
+  border-radius: 1rem;
+  width: fit-content;
+  margin: 1rem;
+  color: antiquewhite;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 1px;
+}
+
+.grid-wrapper {
+  display: grid;
+  width: 40rem;
+  height: 40rem;
+  outline: 0.5rem solid black;
+}
